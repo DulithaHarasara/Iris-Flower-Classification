@@ -11,13 +11,16 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Iris Classification</span>
+    </nav>
     
     <div class="container">
 
-        <div class="row">
-            <div class="col-lg-8">
+        
 
-                <div class="form_container">
+            <div class="form_container">
 
                 <form method="post" action="/">
                 {% csrf_token %}
@@ -41,21 +44,13 @@
                     </div>
                     <button type="submit">Submit</button>
                 </form>
-
-                </div>
+                <br>
+                <h6 class="predh1">Predicted species: {{predResult}}</h6>
 
             </div>
 
-        <div class="col-lg-4">col-4</div>
-            <div  class="row">
-                <div class="col-md-8">
-                <h6 class="predh1">{{predResult}}</h6>
-                </div>
-            </div>
-        </div>
-
-        </div>
     </div>
 
+   
 </body>
 </html>
